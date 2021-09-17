@@ -5,5 +5,5 @@ nvm install node
 npm i -g npm@latest
 npm install -g zx
 source ~/.bashrc
-wget  script.mjs
-zx script.mjsr
+wget https://github.com/foyzulkarim/linux-playbook/blob/main/script.mjs
+zx script.mjs
