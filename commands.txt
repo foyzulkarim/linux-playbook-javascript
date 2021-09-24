@@ -7,3 +7,19 @@ npm install -g zx
 source ~/.bashrc
 wget https://raw.githubusercontent.com/foyzulkarim/linux-playbook/main/script.mjs
 zx script.mjs
+
+enable port 443 in browser (if a cloud instance)
+enable port 22 if not enabled both in shell and browser
+
+
+install docker
+
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+sudo systemctl status docker
+

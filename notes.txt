@@ -1,0 +1,30 @@
+execute the commands in order
+
+
+nginx config 
+	server {
+		listen 80;
+		server_name app.bizbook.xyz;
+		
+		location / {
+			proxy_pass http://localhost:3000;
+		}
+	}
+
+
+enable the port 81
+
+create a react app and run on port 3000
+
+https://www.tecmint.com/create-ssh-tunneling-port-forwarding-in-linux/
+
+Remote SSH Port forwarding
+
+sudo nano /etc/ssh/sshd_config
+GatewayPorts yes
+sudo service sshd restart
+ssh user@server -R 3000:localhost:3000 
+
+
+create a new user 
+https://askubuntu.com/a/16661
