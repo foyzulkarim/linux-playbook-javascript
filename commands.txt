@@ -23,3 +23,27 @@ apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo systemctl status docker
 
+[latest docker compose is 1.29.2]
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo docker-compose --version
+
+git clone https://github.com/foyzulkarim/rbac-mern-boilerplate.git
+
+
+letsencrypt
+sudo apt install certbot python3-certbot-nginx
+
+sudo certbot --nginx -d parcelkoi.com -d www.parcelkoi.com
+sudo systemctl status certbot.timer
+
+renew: 
+sudo certbot renew --dry-run
+
+
+delete docker containers
+sudo docker ps -a
+sudo docker rm -f $(sudo docker ps -a -q)
+
+delete docker images
+sudo docker rmi $(sudo docker images -q)
