@@ -9,3 +9,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 npm i -g npm@latest
 npm install -g zx
+source ~/.bashrc
+zx -v
+zx index.mjs
