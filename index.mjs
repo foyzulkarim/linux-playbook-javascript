@@ -6,7 +6,7 @@ console.log(`You can choose 'y' for YES or 'n' for NO to decide about each insta
 await sleep(1000);
 let shouldProceed = await question('Do you want to proceed? (y/n) ');
 if (shouldProceed === 'y' || shouldProceed === 'yes') {
-    console.log(`The ${shouldProceed} is the best kind of bear.`);
+    console.log(`Thank you for your choice. Installation process will start now. \n\n`);
     await sleep(1000);
     console.log(`Installing packages...`);
     await sleep(1000);
