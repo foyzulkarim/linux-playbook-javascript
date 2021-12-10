@@ -8,3 +8,7 @@ We will use plain and simple *javascript* to automate the installation of softwa
 
 ## Steps
 Run `setup-nvm.sh` to install the software. This will guide you through the installation process.
+
+## YouTube explanation and demo
+
+[![YouTube explanation](https://img.youtube.com/vi/GM6A4dmmOhY/0.jpg)](https://youtu.be/GM6A4dmmOhY)
