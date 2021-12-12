@@ -1,7 +1,7 @@
 await sleep(1000);
 await $`clear`;
 console.log(`Welcome to Linux Playbook repository. The aim of this repository is to provide a collection of scripts to quickly setup your Linux system for (mainly) development purpose.\n \n`);
-console.log(`We will install the following packages: \n - yarn \n - git \n - net-tools (to use ifconfig command) \n - ufw (uncomplicated firewalll) and enable port 80, 443 \n - nginx \n - docker \n - docker-compose \n`);
+console.log(`We will install the following packages: \n - yarn \n - git \n - net-tools (to use ifconfig command) \n - openssh (to allow ssh sessions from remote pc) \n - ufw (uncomplicated firewalll) and enable port 22, 80, 443 \n - nginx \n - docker \n - docker-compose \n`);
 console.log(`You can choose 'y' for YES or 'n' for NO to decide about each installation.\n\n`);
 await sleep(1000);
 let shouldProceed = await question('Do you want to proceed? (y/n) ');

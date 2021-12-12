@@ -31,6 +31,19 @@ if (shouldInstallNetTools.toLowerCase() === 'y') {
     console.log('Skipping net tools installation');
 }
 
+//openssh-server
+await sleep(1000);
+let shouldInstallOpenSSH = await question('Do you want to install openssh-server? [y/n] ');
+if (shouldInstallOpenSSH.toLowerCase() === 'y') {
+    console.log('Installing openssh-server');
+    await $`sudo apt install openssh-server`
+    await $`sudo systemctl enable ssh`
+    await $`sudo systemctl start ssh`
+    await $`sudo systemctl status ssh`
+} else {
+    console.log('Skipping openssh-server installation');
+}
+
 //ufw 
 await sleep(1000);
 let shouldInstallUFW = await question('Do you want to install ufw? [y/n] ');
@@ -39,10 +52,12 @@ if (shouldInstallUFW.toLowerCase() === 'y') {
     await $`sudo apt install ufw`
     await $`sudo ufw allow 80/tcp`
     await $`sudo ufw allow 443/tcp`
+    await $`sudo ufw allow 22/tcp`
     await $`sudo ufw enable`
+    await $`sudo ufw start`
     await $`sudo ufw status`
 } else {
-    console.log('Skipping ufw installation');
+    console.log('Skipping ufw installation. Remote ssh to this computer may not work if you did not install openssh server');
 }
 
 // nginx
