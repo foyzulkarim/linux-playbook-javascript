@@ -18,4 +18,6 @@ After running the `setup.sh` file, it will guide you through the installation pr
 
 ## YouTube explanation and demo
 
-[![YouTube explanation](https://img.youtube.com/vi/GM6A4dmmOhY/0.jpg)](https://youtu.be/GM6A4dmmOhY)
+Click on the image to play the video.
+
+[![YouTube explanation](https://img.youtube.com/vi/GM6A4dmmOhY/0.jpg)](https://youtu.be/-zy-NTI2bAk)
