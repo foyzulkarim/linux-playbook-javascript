@@ -7,7 +7,14 @@ Each time we setup a new linux server, we need to install some software. Instead
 We will use plain and simple *javascript* to automate the installation of software.
 
 ## Steps
-Run `setup-nvm.sh` to install the software. This will guide you through the installation process.
+Execute the following commands in terminal:
+```sh
+> wget https://raw.githubusercontent.com/foyzulkarim/linux-playbook-javascript/main/setup.sh
+> chmod 755 setup.sh
+> ./setup.sh
+```
+
+After running the `setup.sh` file, it will guide you through the installation process.
 
 ## YouTube explanation and demo
 
