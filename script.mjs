@@ -54,7 +54,6 @@ if (shouldInstallUFW.toLowerCase() === 'y') {
     await $`sudo ufw allow 443/tcp`
     await $`sudo ufw allow 22/tcp`
     await $`sudo ufw enable`
-    await $`sudo ufw start`
     await $`sudo ufw status`
 } else {
     console.log('Skipping ufw installation. Remote ssh to this computer may not work if you did not install openssh server');
