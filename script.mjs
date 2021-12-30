@@ -16,6 +16,8 @@ if (shouldInstallGit.toLowerCase() === 'y') {
     console.log('Installing git');
     await $`sudo apt install git`
     await $`git --version`
+    // await $`git config --global user.name "Your Name"`
+    // await $`git config --global user.email "
 } else {
     console.log('Skipping git installation');
 }
