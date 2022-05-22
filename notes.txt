@@ -28,3 +28,6 @@ ssh user@server -R 3000:localhost:3000
 
 create a new user 
 https://askubuntu.com/a/16661
+
+let's encrypt 
+sudo certbot --nginx -d example.com -d www.example.com
