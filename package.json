@@ -1,0 +1,25 @@
+{
+  "name": "linux-playbook-javascript",
+  "version": "1.0.0",
+  "description": "## Why Each time we setup a new linux server, we need to install some software. Instead of manually doing it, we can automate it. This is the purpose of this playbook.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-aws-cli": "zx aws-cli.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foyzulkarim/linux-playbook-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foyzulkarim/linux-playbook-javascript/issues"
+  },
+  "homepage": "https://github.com/foyzulkarim/linux-playbook-javascript#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "zx": "^7.1.1"
+  }
+}
