@@ -1,14 +1,21 @@
 #!/bin/bash
 # My first script
-echo "Setting up nvm!"
-sudo apt install curl 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+echo "This script will setup node in this machine:"
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm install node
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install --lts
 npm i -g npm@latest
 npm install -g zx
 source ~/.bashrc
 zx -v
-zx https://raw.githubusercontent.com/foyzulkarim/linux-playbook-javascript/main/index.mjs
+
+echo "Do you want to install other packages using index.mjs?"
+read -p "y/n: " answer
+if [ "$answer" = "y" ]; then
+  zx './index.mjs'
+else
+  echo "Ok, bye!"
+
+# zx https://raw.githubusercontent.com/foyzulkarim/linux-playbook-javascript/main/index.mjs
